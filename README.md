@@ -1,2 +1,2 @@
-# Wrapper
-Twitter Typeahead Angular Wrapper
+# ng-twitter-typeahead
+Angular wrapper for Twitter Typeahead

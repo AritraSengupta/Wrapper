@@ -1,0 +1,56 @@
+{
+  "name": "ng-twitter-typeahead",
+  "version": "1.0.0",
+  "description": "Angular Wrapper for Twitter Typeahead",
+  "main": "src/index.js",
+  "scripts": {
+    "bundle": "./node_modules/.bin/browserify . -o dist/ng-twitter-typeahead.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AritraSengupta/ng-twitter-typeahead.git"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Aritra Sengupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AritraSengupta/ng-twitter-typeahead/issues"
+  },
+  "homepage": "https://github.com/AritraSengupta/ng-twitter-typeahead#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1",
+    "typeahead.js": "^0.11.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "angular": "./node_modules/angular/angular.js",
+    "typeahead": "./node_modules/typeahead.js/dist/typeahead.bundle.js",
+    "underscore": "./node_modules/underscore/underscore.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "underscore": {
+      "exports": "_"
+    },
+    "angular": {
+      "exports": "angular",
+      "depends": "jquery"
+    }
+  }
+}
